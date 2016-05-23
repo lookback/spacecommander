@@ -1,7 +1,9 @@
 // Copyright 2015 Square, Inc
-#import @"XYZGeometry.h"
+#import "Foo.h"
 #import "Blah.h"
 #import <Great.h>
+#import <B>
+#import <A>
 
 
 #define FQCommonInitInterfaceDeclaration(className) - (void)_ ## className ## _commonInit
@@ -22,7 +24,8 @@ ThisIsAMacroThatShouldNotHaveASemicolonAppended()
 
 BOOL extraSemicolonsNotInsertedAfterCGStructInitializer()
 {
-    CAShapeLayer *contentViewVerticalDividerLayer = [TAFStyles lineShapeLayerFromPoint:CGPointMake(0.0f,
+    CAShapeLayer *contentViewVerticalDividerLayer =
+    [TAFStyles lineShapeLayerFromPoint:CGPointMake(0.0f,
                 CGRectGetHeight(contentView.bounds) - hairline)
         toPoint:CGPointMake(CGRectGetWidth(contentView.bounds),
                 CGRectGetHeight(contentView.bounds) - hairline)
